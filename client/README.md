@@ -1,6 +1,3 @@
-# Prosto
-An online web application providing educational services in the sphere of software engineering. The project is created for a contest organized by the Ministry of Education and Science and University of Sofia.
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
