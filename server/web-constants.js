@@ -1,8 +1,6 @@
-//TODO: CHOOSE A PORT, ADD JWT TOKEN
-
 const webConstants = {
     'PORT': 3030,
-    'JWT-SECRET': 'JWT-SECRET-TOKEN'
+    'JWT-SECRET': 'AOS5AKJSDH-ASDF'
 }
 
 module.exports = webConstants;
