@@ -1,6 +1,7 @@
 .homeButton{
     user-select: none;
-    background-color: lightblue;
+    background-color: #3b5249;
+    color:#a4b494;
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
@@ -11,7 +12,7 @@
 
 .homeButton:hover{
     user-select: none;
-    color:white;
-    background-color:crimson;
+    color:#3b5249;
+    background-color:#a4b494;
     font-weight: bold;
 }

@@ -5,8 +5,9 @@ import './HomeComponent.css'
 const HomeComponent = () => {
     return (
       <div>
-        <h1>Welcome to the site!</h1>
-        <ButtonComponent></ButtonComponent>
+        <h1 className="title">PROSTO</h1>
+        <h5 className="subtitle">Code made simple</h5>
+        <ButtonComponent text="START NOW"></ButtonComponent>
       </div>
     );
 }

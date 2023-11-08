@@ -1,9 +1,9 @@
 import React from "react";
 import './ButtonComponent.css'
 
-const ButtonComponent = () => {
+const ButtonComponent = ({text}) => {
     return(
-        <button class="homeButton" >PRESS ME</button>
+        <button class="homeButton">{text}</button>
     )
 }
 
