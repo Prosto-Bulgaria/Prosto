@@ -6,8 +6,8 @@ const HomeComponent = () => {
     return (
       <div>
         <h1 className="title">PROSTO</h1>
-        <h5 className="subtitle">Code made simple</h5>
-        <ButtonComponent text="START NOW"></ButtonComponent>
+        <h5 className="title subtitle">Code made simple</h5>
+        <ButtonComponent text={"START NOW"}></ButtonComponent>
       </div>
     );
 }
