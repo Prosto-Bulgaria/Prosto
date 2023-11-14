@@ -1,10 +1,10 @@
 import React from "react";
-import './ButtonComponent.css'
+import './HomeButton.css'
 
-const ButtonComponent = ({text}) => {
+const HomeButton = ({text}) => {
     return(
         <button class="homeButton">{text}</button>
     )
 }
 
-export default ButtonComponent;
+export default HomeButton;

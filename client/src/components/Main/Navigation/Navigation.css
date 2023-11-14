@@ -1,7 +1,7 @@
 .navigation{
     background-color: #519872;
     width: 100vw;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
 }
@@ -9,7 +9,7 @@
 .links{
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     gap: 20px;
 
