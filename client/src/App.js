@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from './components/Home/Home';
 import Navigation from './components/Main/Navigation/Navigation';
 import Footer from './components/Main/Footer/Footer';
@@ -11,7 +11,9 @@ function App() {
     <div className="App">
       <Navigation />
       <main>
-        <Route path="/" component={Home} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+        </Switch>
       </main>
       <Footer></Footer>
     </div>
