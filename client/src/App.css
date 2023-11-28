@@ -1,6 +1,7 @@
 .App {
+  font-family: 'Poppins';
   text-align: center;
-  background-color: #242729;
+  background-color: #121212;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,4 +9,19 @@
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background: #121212; 
+}
+::-webkit-scrollbar-thumb {
+  background: #202020; 
+  border-radius: 16px;
+  background-clip:content-box;
+  border: 5px solid transparent;
 }

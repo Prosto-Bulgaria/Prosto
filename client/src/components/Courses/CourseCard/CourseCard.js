@@ -5,10 +5,9 @@ import "./CourseCard.css";
 const CourseCard = () => {
     return(
         <div className="card">
-            <img className="cardImage" src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/hfpqyV7B-IMG-Dubai-UAE.jpg" alt="img" />
+            <img className="cardImage" src="https://innovating.capital/wp-content/uploads/2021/05/placeholder-image-dark.jpg" alt="" />
             <div className="container">
-                <h4 className="title">Title</h4>
-                <p className="description">Description</p>
+                <p className="title">Title</p>
             </div>
         </div>
     )
