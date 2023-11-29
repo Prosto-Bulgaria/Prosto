@@ -7,7 +7,10 @@ const Home= () => {
       <div>
         <h1 className="title">PROSTO</h1>
         <h5 className="title subtitle">Code made simple</h5>
-        <HomeButton text={"ENROLL NOW"}></HomeButton>
+        <ul className="buttons-container">
+          <li><HomeButton text={"ENROLL NOW"}></HomeButton></li>
+          <li><HomeButton text={"Learn more"}></HomeButton></li>
+        </ul>
       </div>
     );
 }
