@@ -8,7 +8,11 @@ const Navigation = () => {
         <nav className="navigation">
           <p className="links">
             <Link to="/" className="link">
-              Home
+              <img className='logo'
+                src={require("../../../assets/ProstoNewLogo.png")}
+                alt="logo"
+              />
+              <p className='logoText'>Prosto</p>
             </Link>
             <Link to="/courses" className="link">
               Courses
