@@ -7,10 +7,10 @@ const Navigation = () => {
       <header>
         <nav className="navigation">
           <p className="links">
-            <Link to="/" className="link">
-              <img className='logo'
+            <Link to="/" className="logo">
+              <img className='icon'
                 src={require("../../../assets/ProstoNewLogo.png")}
-                alt="logo"
+                alt="icon"
               />
               <p className='logoText'>Prosto</p>
             </Link>
