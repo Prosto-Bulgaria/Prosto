@@ -1,8 +1,7 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri =
-  "mongodb+srv://first-user:XCkX17knzjHec3Nf@prostocluster.wrilkzi.mongodb.net/?retryWrites=true&w=majority";
+const webConstants = require("../web-constants");
 
-const client = new MongoClient(uri, {
+const client = new MongoClient(webConstants["MONGO-URI"], {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,
