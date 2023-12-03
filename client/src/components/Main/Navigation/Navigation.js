@@ -23,7 +23,7 @@ const Navigation = () => {
               Sign in
             </Link>
             <Link to="/register" className="link register">
-              Sing up
+              Sign up
             </Link>
           </p>
         </nav>

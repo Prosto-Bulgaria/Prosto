@@ -14,6 +14,10 @@ const Courses = () =>{
           <CourseCard></CourseCard>
           <CourseCard></CourseCard>
           <CourseCard></CourseCard>
+          <CourseCard></CourseCard>
+          <CourseCard></CourseCard>
+          <CourseCard></CourseCard>
+          <CourseCard></CourseCard>
         </ul>
       </div>
     );
