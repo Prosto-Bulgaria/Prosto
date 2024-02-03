@@ -1,13 +1,12 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require("../models/User");
-const webConstants = require('../web-constants');
 
 const tokenBlacklist = new Set();
 
 const validateToken = (token) => {
     try {
-        const data = jwt.verify(token, webConstants['JWT-SECRET'])
+        const data = jwt.verify(token, process.env.JWT_SECRET)
         return data
     } catch (error) {
         throw new Error('Invalid access token!')
@@ -72,7 +71,7 @@ function createToken(user) {
         _id: user._id,
         username: user.username,
         email: user.email,
-        accessToken: jwt.sign(payload, webConstants['JWT-SECRET'])
+        accessToken: jwt.sign(payload, process.env.JWT_SECRET)
     }
 }
 
