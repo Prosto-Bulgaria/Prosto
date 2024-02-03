@@ -12,8 +12,14 @@ app.use(express.json());
 app.use(authMiddleware);
 app.use(router)
 
-app.listen(webConstants.PORT, async() => {
-    console.log(`\x1b[33m→ Connecting to Database...\x1b[0m`)
-    initDatabase().catch(console.dir);
-    console.log(`\x1b[32mProsto API listening on port ${webConstants.PORT}\x1b[0m`);
+initDatabase()
+.then(() => {
+    app.listen(webConstants.PORT, () => console.log(`\x1b[32m→ Prosto API listening on port ${webConstants.PORT}\x1b[0m`))
 })
+.catch((err) => console.log(err));
+
+// app.listen(webConstants.PORT, async() => {
+//     console.log(`\x1b[33m→ Connecting to Database...\x1b[0m`)
+//     initDatabase().catch(console.dir);
+//     console.log(`\x1b[32mProsto API listening on port ${webConstants.PORT}\x1b[0m`);
+// })
