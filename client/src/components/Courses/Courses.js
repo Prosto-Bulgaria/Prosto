@@ -1,5 +1,3 @@
-import React from "react";
-
 import CourseCard from "./CourseCard/CourseCard"
 import "./Courses.css";
 

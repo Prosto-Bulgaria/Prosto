@@ -6,7 +6,7 @@ const Navigation = () => {
     return (
       <header>
         <nav className="navigation">
-          <p className="links">
+          <span className="links">
             <Link to="/" className="logo">
               <img className='icon'
                 src={require("../../../assets/ProstoNewLogo.png")}
@@ -17,15 +17,15 @@ const Navigation = () => {
             <Link to="/courses" className="link">
               Courses
             </Link>
-          </p>
-          <p className="links auth">
+          </span>
+          <span className="links auth">
             <Link to="/login" className="link">
               Sign in
             </Link>
             <Link to="/register" className="link register">
               Sign up
             </Link>
-          </p>
+          </span>
         </nav>
       </header>
     );

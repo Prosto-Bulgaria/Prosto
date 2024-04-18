@@ -3,7 +3,7 @@ import './HomeButton.css'
 
 const HomeButton = ({text}) => {
     return(
-        <button class="homeButton">{text}</button>
+        <button className="homeButton">{text}</button>
     )
 }
 

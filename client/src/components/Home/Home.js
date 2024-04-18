@@ -11,7 +11,7 @@ const Home= () => {
           <h5 className="title subtitle">Code made simple</h5>
           <ul className="buttons-container">
             <li>
-              <Link to="/login">
+              <Link to="/register">
                 <HomeButton text={"Sign up now"}></HomeButton>
               </Link>
             </li>
