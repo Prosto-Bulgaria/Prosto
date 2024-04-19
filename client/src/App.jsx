@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <AuthContext.Provider value={true}>
-        <div className="App">
+        <div className="App bg-background_dark text-text_dark">
             <Navigation />
             <main>
                 <Routes>

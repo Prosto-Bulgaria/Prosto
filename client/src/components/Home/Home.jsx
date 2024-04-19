@@ -1,31 +1,34 @@
-import { Link } from 'react-router-dom'
-import HomeButton from './HomeButton/HomeButton';
-import './Home.css'
+import { Link } from "react-router-dom";
+import Button from "../Main/Buttons/Button/Button";
+import "./Home.css";
 
-const Home= () => {
-    return (
-      <div>
-        <section className="welcome">
-          <h1 className="title">PROSTO</h1>
-          <h5 className="title subtitle">Code made simple</h5>
-          <ul className="buttons-container">
-            <li>
-              <Link to="/register">
-                <HomeButton text={"Sign up now"}></HomeButton>
-              </Link>
-            </li>
-            <li>
-              <Link to="/courses">
-                <HomeButton text={"Our courses"}></HomeButton>
-              </Link>
-            </li>
-          </ul>
-        </section>
-        <section className="">
-          
-        </section>
-      </div>
-    );
-}
+const Home = () => {
+  return (
+    <div className="font-bold">
+      <section className="welcome">
+        <h1 className="title ">PROSTO</h1>
+        <h5 className="title subtitle "> 
+            <p className="
+            bg-gradient-to-r from-primary_dark to-accent_dark
+            inline-block text-transparent bg-clip-text">Code
+            </p> made simple
+        </h5>
+        <ul className="buttons-container">
+          <li>
+            <Link to="/register">
+              <Button text={"Sign up now"} type={"primary"}></Button>
+            </Link>
+          </li>
+          <li>
+            <Link to="/courses">
+              <Button text={"Our courses"} type={"secondary"}></Button>
+            </Link>
+          </li>
+        </ul>
+      </section>
+      <section className=""></section>
+    </div>
+  );
+};
 
 export default Home;
