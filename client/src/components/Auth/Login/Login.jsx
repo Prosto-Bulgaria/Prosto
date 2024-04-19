@@ -8,8 +8,8 @@ const Login = () => {
         e.preventDefault();
 
         let {email, password} = Object.fromEntries(new FormData(e.currentTarget));
-        authService.login(email,password).then(() => {
-            console.log('success!');
+        authService.login(email,password).then(res => {
+            console.log(res);
             navigate('/')
         })
         .catch(err => {

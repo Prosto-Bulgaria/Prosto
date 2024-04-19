@@ -12,6 +12,7 @@ const Register = () => {
 
         authService.register(username,email,password)
             .then(authData => {
+                console.log(authData);
                 navigate('/')
             })
     }

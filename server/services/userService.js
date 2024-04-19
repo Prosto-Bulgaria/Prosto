@@ -62,13 +62,13 @@ async function getUserByUsername(username) {
 
 function createToken(user) {
     const payload = {
-        _id: user._id,
+        // _id: user._id,
         username: user.username,
         email: user.email,
     }
 
     return {
-        _id: user._id,
+        // _id: user._id,
         username: user.username,
         email: user.email,
         accessToken: jwt.sign(payload, process.env.JWT_SECRET)
