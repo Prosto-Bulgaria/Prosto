@@ -19,23 +19,23 @@ const Login = () => {
     }
 
     return (
-      <section id="login-page" className="login">
+      <section id="login-page" className="login ">
         <form id="login-form" onSubmit={loginHandler} method="POST">
           <fieldset>
-            <legend>Login</legend>
+            <legend className="text-text dark:text-text_dark">Login</legend>
             <p className="field">
-                <label htmlFor="email">Email</label>
+                <label className="text-text dark:text-text_dark" htmlFor="email">Email</label>
                 <span className="input">
                     <input type="text" name="email" placeholder="johndoe@gmail.com" />
                 </span>
             </p>
             <p className="field">
-                <label htmlFor="password">Password</label>
+                <label className=" text-text dark:text-text_dark" htmlFor="password">Password</label>
                 <span className="input">
                     <input type="text" name="password" placeholder="Password" />
                 </span>
             </p>
-            <input type="submit" className="button submit" value="Login"/>
+            <input type="submit" className="button submit text-text dark:text-text_dark" value="Login"/>
           </fieldset>
         </form>
       </section>
