@@ -7,7 +7,6 @@ import Footer from "./components/Main/Footer/Footer";
 import Login from "./components/Auth/Login/Login";
 import Register from "./components/Auth/Register/Register";
 import Theme from "./components/Main/Theme/Theme";
-import "./App.css";
 
 function App() {
     return (
