@@ -28,37 +28,6 @@
     @apply transition-colors duration-300;
 }
 
-:root {
-    --scrollbar-thumb-color: #888;
-    /* Default light color */
-    --scrollbar-track-color: hsl(197, 47%, 97%);
-    /* Default light color */
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --scrollbar-thumb-color: #202020;
-        /* Dark color */
-        --scrollbar-track-color: hsl(197, 47%, 3%);
-        /* Dark color */
-    }
-}
-
-/* Apply scrollbar styles */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar-thumb-color);
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--scrollbar-track-color);
-}
-
 body {
     margin: 0;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -66,8 +35,8 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-y: scroll;
 }
+
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
