@@ -21,7 +21,7 @@ const Theme = ({ children }) => {
     // localStorage.theme = "dark";
 
 
-    const [darkMode, setDarkMode] = useLocalStorageThemes('darkMode', false);
+    const [darkMode, setDarkMode] = useLocalStorageThemes('darkMode', true);
 
     const changeThemeHandler = () => {
         setDarkMode(!darkMode);
