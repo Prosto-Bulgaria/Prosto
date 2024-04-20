@@ -4,13 +4,12 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="font-bold ">
+    <div className="font-bold mt-48">
       <section className="welcome">
         <h1 className="title text-text dark:text-text_dark">PROSTO</h1>
         <h5 className="title subtitle text-text dark:text-text_dark"> 
             <p className=" 
-            bg-gradient-to-r from-primary to-accent dark:from-primary_dark dark:to-accent_dark
-            inline-block text-transparent bg-clip-text">Code
+            gradient-effect">Code
             </p> made simple
         </h5>
         <ul className="buttons-container">

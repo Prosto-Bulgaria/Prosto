@@ -17,8 +17,8 @@ const Theme = ({children}) => {
         <img className="w-5 invert" src={sunLogo} alt="sun" />
     )
     return(
-        <div className={`${darkMode && "dark"}`}>
-            <button className="absolute top-6 right-14 drop-shadow-md bg-gray-300 dark:bg-white/5 rounded-full p-2" onClick={changeThemeHandler}>{darkMode? sun : moon}</button>
+        <div className={`${!darkMode && "dark"}`}>
+            <button className="absolute top-[22px] right-14 drop-shadow-md bg-gray-300 dark:bg-white/5 rounded-full p-2" onClick={changeThemeHandler}>{!darkMode? sun : moon}</button>
             {children}
         </div>
     )

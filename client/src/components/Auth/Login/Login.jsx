@@ -42,7 +42,7 @@ const Login = () => {
                             <div className="flex">
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm font-medium leading-6 dark:text-text_dark text-text"
+                                    className="form-label"
                                 >
                                     Email address
                                 </label>
@@ -55,7 +55,7 @@ const Login = () => {
                                     autoComplete="email"
                                     required
                                     placeholder="johndoe@gmail.com"
-                                    className="block w-full rounded-md border-0 p-1.5 dark:bg-white/5 dark:text-text_dark text-text shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-0 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                    className="form-input"
                                 />
                             </div>
                         </div>
@@ -64,7 +64,7 @@ const Login = () => {
                             <div className="flex items-center justify-between">
                                 <label
                                     htmlFor="password"
-                                    className="block text-sm font-medium leading-6 dark:text-text_dark text-text"
+                                    className="form-label"
                                 >
                                     Password
                                 </label>
@@ -72,7 +72,7 @@ const Login = () => {
                                     <Link
                                     //TODO: make forgot pass func
                                         to="#"
-                                        className="font-semibold text-accent dark:text-accent_dark dark:hover:text-primary_dark hover:text-primary_dark"
+                                        className="anchor-link"
                                     >
                                         Forgot password?
                                     </Link>
@@ -86,7 +86,7 @@ const Login = () => {
                                     autoComplete="current-password"
                                     required
                                     placeholder="Enter your password"
-                                    className="block w-full rounded-md border-0 p-1.5 dark:bg-white/5 dark:text-text_dark text-text shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-0 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                    className="form-input"
                                 />
                             </div>
                         </div>
@@ -95,7 +95,7 @@ const Login = () => {
                             <input
                                 type="submit"
                                 value="Submit"
-                                className="flex w-full cursor-pointer justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:text-primary_dark dark:hover:text-primary dark:hover:bg-primary_dark"
+                                className="form-button"
                             />
                         </div>
                     </form>
@@ -104,7 +104,7 @@ const Login = () => {
                         Don&apos;t have an account? {" "}
                         <Link
                             to="/register"
-                            className="font-semibold leading-6 text-accent dark:text-accent_dark dark:hover:text-primary_dark hover:text-primary_dark "
+                            className="anchor-link"
                         >
                             Sign up here
                         </Link>

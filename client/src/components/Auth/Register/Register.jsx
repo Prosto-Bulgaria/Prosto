@@ -29,16 +29,7 @@ const Register = () => {
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight dark:text-text_dark text-text">
-                        Create your {" "} 
-                        <p
-                            className="
-                            bg-gradient-to-r from-primary to-accent dark:from-primary_dark  dark:to-accent_dark
-                            inline-block text-transparent bg-clip-text
-                            "
-                        >
-                            Prosto
-                        </p>
-                        {" "} account
+                        Create your <p className="gradient-effect">Prosto</p> account
                     </h2>
                 </div>
 
@@ -53,7 +44,7 @@ const Register = () => {
                             <div className="flex">
                                 <label
                                     htmlFor="username"
-                                    className="block text-sm font-medium leading-6 dark:text-text_dark text-text"
+                                    className="form-label"
                                 >
                                     Username
                                 </label>
@@ -66,7 +57,7 @@ const Register = () => {
                                     required
                                     autoComplete="none"
                                     placeholder="Enter your username"
-                                    className="block w-full rounded-md border-0 p-1.5 dark:text-text_dark dark:bg-white/5 text-text shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-0 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                    className="form-input"
                                 />
                             </div>
                         </div>
@@ -75,7 +66,7 @@ const Register = () => {
                             <div className="flex">
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm font-medium leading-6 dark:text-text_dark text-text"
+                                    className="form-label"
                                 >
                                     Email address
                                 </label>
@@ -88,7 +79,7 @@ const Register = () => {
                                     autoComplete="email"
                                     required
                                     placeholder="johndoe@gmail.com"
-                                    className="block w-full rounded-md border-0 p-1.5 dark:text-text_dark dark:bg-white/5 text-text shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-0 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                    className="form-input"
                                 />
                             </div>
                         </div>
@@ -97,7 +88,7 @@ const Register = () => {
                             <div className="flex items-center justify-between">
                                 <label
                                     htmlFor="password"
-                                    className="block text-sm font-medium leading-6 dark:text-text_dark text-text"
+                                    className="form-label"
                                 >
                                     Password
                                 </label>
@@ -110,7 +101,7 @@ const Register = () => {
                                     autoComplete="current-password"
                                     required
                                     placeholder="Enter your password"
-                                    className="block w-full rounded-md border-0 p-1.5 dark:text-text_dark dark:bg-white/5 text-text shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-0 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                    className="form-input"
                                 />
                             </div>
                         </div>
@@ -119,7 +110,7 @@ const Register = () => {
                             <div className="flex items-center justify-between">
                                 <label
                                     htmlFor="re-pass"
-                                    className="block text-sm font-medium leading-6 dark:text-text_dark text-text"
+                                    className="form-label"
                                 >
                                     Confirm password
                                 </label>
@@ -132,7 +123,7 @@ const Register = () => {
                                     autoComplete="current-password"
                                     required
                                     placeholder="Enter your password"
-                                    className="block w-full rounded-md border-0 p-1.5 dark:text-text_dark dark:bg-white/5 text-text shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-0 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                                    className="form-input"
                                 />
                             </div>
                         </div>
@@ -141,7 +132,7 @@ const Register = () => {
                             <input
                                 type="submit"
                                 value="Submit"
-                                className="flex w-full cursor-pointer justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:text-primary_dark dark:hover:text-primary dark:hover:bg-primary_dark"
+                                className="form-button"
                             />
                         </div>
                     </form>
@@ -149,8 +140,8 @@ const Register = () => {
                     <p className="mt-10 text-center text-sm text-gray-500">
                         Already have an account?{" "}
                         <Link
-                            to="/register"
-                            className="font-semibold leading-6 text-accent dark:text-accent_dark dark:hover:text-primary_dark hover:text-primary_dark"
+                            to="/login"
+                            className="anchor-link"
                         >
                             Sign in here
                         </Link>
