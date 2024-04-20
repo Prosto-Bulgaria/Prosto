@@ -25,59 +25,27 @@ const Register = () => {
     };
 
     return (
-        //   <section id="register-page" className="register">
-        //     <form id="register-form" onSubmit={registerHandler} method="POST">
-        //       <fieldset>
-        //         <legend className="text-text dark:text-text_dark">Register</legend>
-        //         <p className="field">
-        //             <label className="text-text dark:text-text_dark" htmlFor="username">Username</label>
-        //             <span className="input">
-        //                 <input type="text" name="username" placeholder="JohnDoe420" />
-        //             </span>
-        //         </p>
-        //         <p className="field">
-        //             <label className="text-text dark:text-text_dark" htmlFor="email">Email</label>
-        //             <span className="input">
-        //                 <input type="text" name="email" placeholder="johndoe@gmail.com" />
-        //             </span>
-        //         </p>
-        //         <p className="field">
-        //             <label className="text-text dark:text-text_dark" htmlFor="password">Password</label>
-        //             <span className="input">
-        //                 <input type="text" name="password" placeholder="Password" />
-        //             </span>
-        //         </p>
-        //         <p className="field">
-        //             <label className="text-text dark:text-text_dark" htmlFor="repeat-pass">Confirm password</label>
-        //             <span className="input">
-        //                 <input type="text" name="repeat-pass" placeholder="Repeat your password" />
-        //             </span>
-        //         </p>
-        //         <input type="submit" className="button submit cursor-pointer text-text dark:text-text_dark" value="Register"/>
-        //       </fieldset>
-        //     </form>
-        //   </section>
-        <section id="login-page" className="login">
+        <section id="register-page" className="register">
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight dark:text-text_dark text-text">
-                        Create your
+                        Create your {" "} 
                         <p
                             className="
-                            bg-gradient-to-r from-primary_dark to-accent_dark
+                            bg-gradient-to-r from-primary to-accent dark:from-primary_dark  dark:to-accent_dark
                             inline-block text-transparent bg-clip-text
                             "
                         >
                             Prosto
                         </p>
-                        account
+                        {" "} account
                     </h2>
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form
                         className="space-y-6"
-                        id="login-form"
+                        id="register-form"
                         onSubmit={registerHandler}
                         method="POST"
                     >
@@ -181,7 +149,7 @@ const Register = () => {
                     <p className="mt-10 text-center text-sm text-gray-500">
                         Already have an account?{" "}
                         <Link
-                            to="/login"
+                            to="/register"
                             className="font-semibold leading-6 text-accent dark:text-accent_dark dark:hover:text-primary_dark hover:text-primary_dark"
                         >
                             Sign in here
