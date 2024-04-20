@@ -2,10 +2,7 @@ import { Link } from "react-router-dom";
 import logoUrl from "../../../assets/ProstoNoBg.png";
 import "./Navigation.css";
 
-const Navigation = ({onDark, darkMode}) => {
-
-    let changeThemeHandler= onDark
-
+const Navigation = () => {
     let guestNav = (
         <>
             <Link to="/login" className="link text-text dark:text-text_dark">
@@ -26,7 +23,6 @@ const Navigation = ({onDark, darkMode}) => {
                     </Link>
                 </span>
                 <span className="links">
-                    <button onClick={changeThemeHandler}>{darkMode? "☀️" : "🌑"}</button>
                     <Link to="/courses" className="link text-text dark:text-text_dark">
                         Courses
                     </Link>
