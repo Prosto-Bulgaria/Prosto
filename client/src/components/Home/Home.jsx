@@ -4,10 +4,10 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="font-bold mt-48">
-      <section className="welcome">
+    <div className="font-bold mt-48 ">
+      <section className="welcome ">
         <h1 className="title text-text dark:text-text_dark">PROSTO</h1>
-        <h5 className="title subtitle text-text dark:text-text_dark"> 
+        <h5 className="title subtitle text-text dark:text-text_dark "> 
             <p className=" 
             gradient-effect">Code
             </p> made simple
