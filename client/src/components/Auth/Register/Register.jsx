@@ -15,6 +15,10 @@ const Register = () => {
                 console.log(authData);
                 navigate('/')
             })
+            .catch(err => {
+                // TODO : Show feedback/notification
+                console.log(err);
+            });
     }
 
     return (
@@ -46,7 +50,7 @@ const Register = () => {
                     <input type="text" name="repeat-pass" placeholder="Repeat your password" />
                 </span>
             </p>
-            <input type="submit" className="button submit text-text dark:text-text_dark" value="Register"/>
+            <input type="submit" className="button submit cursor-pointer text-text dark:text-text_dark" value="Register"/>
           </fieldset>
         </form>
       </section>

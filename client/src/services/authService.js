@@ -19,13 +19,21 @@ export const login = async (email, password) =>{
 }
 
 export const register = async (username, email, password) => {
-    return await fetch(`${baseUrl}/users/register`, {
+    let res = await fetch(`${baseUrl}/users/register`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
         },
         body: JSON.stringify({username, email, password})
-    }).then(res => res.json())
+    });
+
+    let result = await res.json();
+
+    if(res.ok){
+        return result
+    } else {
+        throw result
+    }
 }
 
 export const getUser = () => {
