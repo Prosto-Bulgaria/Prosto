@@ -10,9 +10,9 @@ const useLocalStorageThemes = (key, initialValue) => {
                 "color-scheme",
                 `${item ? "dark" : "light"}`
             );
-
-            return item === "true" ? item : initialValue;
+            return item === "true" ? true : false;
         } catch (err) {
+            console.log(err);
             return initialValue;
         }
     });

@@ -10,7 +10,7 @@ const Theme = ({ children }) => {
     const changeThemeHandler = () => {
         setDarkMode(!darkMode);
     };
-
+    
     let moon = <img className="w-5" src={moonLogo} alt="moon" />;
 
     let sun = <img className="w-5 invert" src={sunLogo} alt="sun" />;
