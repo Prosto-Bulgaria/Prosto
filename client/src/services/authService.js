@@ -36,6 +36,14 @@ export const register = async (username, email, password) => {
     }
 }
 
+export const logout = async (accessToken) => {
+    return fetch(`${baseUrl}/users/logout`, {
+        headers: {
+            'X-Authorization': accessToken,
+        }
+    })
+};
+
 export const getUser = () => {
     let username = localStorage.getItem('username')
 

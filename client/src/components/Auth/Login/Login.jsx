@@ -1,8 +1,11 @@
 import { useNavigate, Link } from "react-router-dom";
 
 import * as authService from "../../../services/authService";
+import { useAuthContext } from "../../../contexts/AuthContext";
 const Login = () => {
     const navigate = useNavigate();
+
+    const authContext = useAuthContext();
 
     const loginHandler = (e) => {
         e.preventDefault();
@@ -12,8 +15,8 @@ const Login = () => {
         );
         authService
             .login(email, password)
-            .then((res) => {
-                console.log(res);
+            .then((authData) => {
+                authContext.login(authData)
                 navigate("/");
             })
             .catch((err) => {

@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import logoUrl from "../../../assets/ProstoNoBg.png";
 import "./Navigation.css";
+import { useAuthContext } from "../../../contexts/AuthContext";
 
 const Navigation = () => {
+
+    const {user} = useAuthContext()
+    
     let guestNav = (
         <>
             <Link to="/login" className="link text-text dark:text-text_dark">
@@ -13,6 +17,12 @@ const Navigation = () => {
             </Link>
         </>
     );
+
+    let userNav = (
+        <>
+            <Link to="/profile" className="link text-text dark:text-text_dark">Profile</Link>
+        </>
+    ) 
 
     return (
         <header>
@@ -26,7 +36,7 @@ const Navigation = () => {
                     <Link to="/courses" className="link text-text dark:text-text_dark">
                         Courses
                     </Link>
-                    {guestNav}
+                    {user.email? userNav : guestNav}
                 </span>
             </nav>
         </header>
