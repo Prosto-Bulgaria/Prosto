@@ -10,12 +10,13 @@ const Login = () => {
     const loginHandler = (e) => {
         e.preventDefault();
 
-        let { email, password } = Object.fromEntries(
+        let { email, password, remember_me } = Object.fromEntries(
             new FormData(e.currentTarget)
         );
         authService
             .login(email, password)
             .then((authData) => {
+                authData.remember_me = remember_me
                 authContext.login(authData)
                 navigate("/");
             })
@@ -92,8 +93,16 @@ const Login = () => {
                                     className="form-input"
                                 />
                             </div>
+                            <div className="mt-3 flex gap-2">
+                                <input 
+                                    id="remember_me"
+                                    name="remember_me"
+                                    type="checkbox"
+                                    className="block"
+                                />
+                                <label htmlFor="remember_me" className="form-label text-accent dark:text-accent_dark">Remember me</label>
+                            </div>
                         </div>
-
                         <div>
                             <input
                                 type="submit"

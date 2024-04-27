@@ -14,7 +14,8 @@ const useLocalStorageAuth = (key, initialValue) => {
 
     const setItem = (value) => {
         try {
-            localStorage.setItem(key, JSON.stringify(value));
+            value.remember_me? localStorage.setItem(key, JSON.stringify(value)) : null;
+            value === initialValue? localStorage.setItem(key, JSON.stringify(value)) : null;
 
             setState(value);
         } catch (err) {
