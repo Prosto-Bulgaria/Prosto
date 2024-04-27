@@ -3,8 +3,10 @@ import {useState} from 'react'
 const useLocalStorageAuth = (key, initialValue) => {
     const [state, setState] = useState(() => {
         try {
-            let item = localStorage.getItem(key);
-
+            let item = sessionStorage.getItem(key);
+            if (!item) {
+              item = localStorage.getItem(key);  
+            }
             return item? JSON.parse(item) : initialValue;
         } catch (err) {
             console.log(err);
@@ -14,9 +16,12 @@ const useLocalStorageAuth = (key, initialValue) => {
 
     const setItem = (value) => {
         try {
-            value.remember_me? localStorage.setItem(key, JSON.stringify(value)) : null;
-            value === initialValue? localStorage.setItem(key, JSON.stringify(value)) : null;
-
+            value.remember_me? localStorage.setItem(key, JSON.stringify(value)) : sessionStorage.setItem(key, JSON.stringify(value));
+            if (value === initialValue) {
+                localStorage.setItem(key, JSON.stringify(value));
+                sessionStorage.removeItem(key);
+            }
+            
             setState(value);
         } catch (err) {
             console.log(err);
