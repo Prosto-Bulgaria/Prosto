@@ -31,7 +31,7 @@ const Login = () => {
         <section id="login-page" className="login">
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight dark:text-text_dark text-text">
+                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight dark:text-text_dark text-text select-none">
                         Sign in to your account
                     </h2>
                 </div>
@@ -90,7 +90,7 @@ const Login = () => {
                                     type="password"
                                     autoComplete="current-password"
                                     required
-                                    placeholder="Enter your password"
+                                    placeholder="password123"
                                     className="form-input"
                                 />
                             </div>
@@ -101,7 +101,7 @@ const Login = () => {
                                     type="checkbox"
                                     className="block"
                                 />
-                                <label htmlFor="remember_me" className="form-label text-accent dark:text-accent_dark">Remember me</label>
+                                <label htmlFor="remember_me" className="form-label text-accent dark:text-accent_dark select-none">Remember me</label>
                             </div>
                         </div>
                         <div>
