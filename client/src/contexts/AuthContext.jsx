@@ -20,8 +20,10 @@ export const AuthProvider = ({children}) => {
 
     const logout = () => setUser(initialState);
 
+    const isAuthenticated = Boolean(user.email);
+
     return(
-        <AuthContext.Provider value={{user, login, logout}}>
+        <AuthContext.Provider value={{user, login, logout, isAuthenticated}}>
             {children}
         </AuthContext.Provider>
     )

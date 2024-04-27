@@ -2,6 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import * as authService from "../../../services/authService";
 import { useAuthContext } from "../../../contexts/AuthContext";
+import { isAuth } from "../../../hoc/isAuth";
 const Login = () => {
     const navigate = useNavigate();
 
@@ -127,4 +128,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default isAuth(Login);

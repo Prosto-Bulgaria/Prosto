@@ -2,6 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import * as authService from "../../../services/authService";
 import { useAuthContext } from "../../../contexts/AuthContext";
+import { isAuth } from "../../../hoc/isAuth";
 
 const Register = () => {
     const navigate = useNavigate();
@@ -156,4 +157,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default isAuth(Register);
