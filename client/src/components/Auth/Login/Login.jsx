@@ -29,16 +29,16 @@ const Login = () => {
 
     return (
         <section id="login-page" className="login">
-            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-primary_dark/5 rounded-lg border-2 border-primary/5">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight dark:text-text_dark text-text select-none">
                         Sign in to your account
                     </h2>
                 </div>
 
-                <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm ">
                     <form
-                        className="space-y-6"
+                        className="space-y-6 w-80"
                         id="login-form"
                         onSubmit={loginHandler}
                         method="POST"
