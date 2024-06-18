@@ -16,6 +16,9 @@ export default {
                 secondary_dark: "hsl(2, 57%, 34%)",
                 accent_dark: "hsl(60, 57%, 56%)",
             },
+            fontSize:{
+                large: '5rem'
+            }
         },
     },
     plugins: [],
