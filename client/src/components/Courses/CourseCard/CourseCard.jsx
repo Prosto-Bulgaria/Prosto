@@ -14,13 +14,13 @@ const CourseCard = ({course}) => {
                     <div className="wrap text-start p-4 flex flex-col  gap-2 grow">
                         <div className="flex justify-between">
                             <header>
-                                <h2 className="text-xl text-text font-bold dark:text-text_dark">
+                                <h2 className="text-xl font-bold">
                                     {course.title}
                                 </h2>
                             </header>
                         </div>
                         <div className="description grow">
-                            <p className="text-sm flex text-text dark:text-text_dark">
+                            <p className="text-sm flex">
                                 {course.description}
                             </p>
                         </div>

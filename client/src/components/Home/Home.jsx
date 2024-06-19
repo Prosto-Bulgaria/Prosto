@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <div className="font-bold mt-48 ">
       <section className="welcome ">
-        <h1 className="text-text dark:text-text_dark text-large select-none">PROSTO</h1>
-        <h5 className="text-text dark:text-text_dark text-xl select-none mb-24"> 
+        <h1 className="text-large select-none">PROSTO</h1>
+        <h5 className="text-xl select-none mb-24"> 
             <p className=" 
             gradient-effect">Code
             </p> made simple

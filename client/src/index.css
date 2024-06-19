@@ -4,11 +4,11 @@
 
 @layer components {
     .form-input {
-        @apply block w-full rounded-md border-0 p-1.5 bg-white dark:bg-white/5 dark:text-text_dark text-text shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-0 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
+        @apply block w-full rounded-md border-0 p-1.5 bg-white dark:bg-white/5 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-0 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
     }
 
     .form-label {
-        @apply block text-sm font-medium leading-6 dark:text-text_dark text-text
+        @apply block text-sm font-medium leading-6
     }
 
     .gradient-effect {
@@ -21,6 +21,10 @@
 
     .anchor-link {
         @apply font-semibold leading-6 text-accent dark:text-accent_dark dark:hover:text-primary_dark hover:text-primary_dark
+    }
+
+    *:not(empty){
+        @apply dark:text-text_dark text-text
     }
 }
 

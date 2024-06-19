@@ -9,13 +9,13 @@ const Navigation = () => {
     
     let guestNav = (
         <>
-            <Link to="/login" className="link text-text dark:text-text_dark">
+            <Link to="/login" className="link">
                 Sign in
             </Link>
-            <Link to="/register" className="link register text-text dark:text-text_dark">
+            <Link to="/register" className="link register">
                 Sign up
             </Link>
-            <Link to="/courses/create" className="link create text-text dark:text-text_dark">
+            <Link to="/courses/create" className="link create">
                 Create course
             </Link>
         </>
@@ -23,7 +23,7 @@ const Navigation = () => {
 
     let userNav = (
         <>
-            <Link to="/profile" className="link text-text dark:text-text_dark">Profile</Link>
+            <Link to="/profile" className="link">Profile</Link>
         </>
     ) 
 
@@ -36,7 +36,7 @@ const Navigation = () => {
                     </Link>
                 </span>
                 <span className="links">
-                    <Link to="/courses" className="link text-text dark:text-text_dark">
+                    <Link to="/courses" className="link">
                         Courses
                     </Link>
                     {user.email? userNav : guestNav}
