@@ -16,7 +16,6 @@ function App() {
         <>
             <AuthProvider>
                 <Theme>
-                    
                         <div className="App bg-background dark:bg-background_dark flex flex-col min-w-screen min-h-screen overflow-x-hidden items-center text-center justify-between">
                             <Navigation />
                             <main>
