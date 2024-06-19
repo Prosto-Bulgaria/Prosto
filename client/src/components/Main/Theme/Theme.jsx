@@ -2,6 +2,7 @@ import { useState } from "react";
 import moonLogo from "../../../assets/moon.png";
 import sunLogo from "../../../assets/sun.png";
 import useLocalStorageThemes from "../../../hooks/useLocalStorageThemes";
+import {SkeletonTheme} from "react-loading-skeleton"
 
 const Theme = ({ children }) => {
 
@@ -22,7 +23,9 @@ const Theme = ({ children }) => {
             >
                 {!darkMode ? moon : sun}
             </button>
-            {children}
+            <SkeletonTheme baseColor={`${darkMode? "#313131": "#EFEFEF"}`} highlightColor={`${darkMode? "#525252": "#d3d3d3"}`}>
+                {children}
+            </SkeletonTheme>
         </div>
     );
 };

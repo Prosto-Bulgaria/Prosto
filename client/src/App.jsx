@@ -16,21 +16,37 @@ function App() {
         <>
             <AuthProvider>
                 <Theme>
-                    <div className="App bg-background dark:bg-background_dark flex flex-col min-w-screen min-h-screen overflow-x-hidden items-center text-center justify-between">
-                        <Navigation />
-                        <main>
-                            <Routes>
-                                <Route path="/" element={<Home />} />
-                                <Route path="/courses" element={<Courses />} />
-                                <Route path="/login" element={<Login />} />
-                                <Route path="/register" element={<Register />}/>
-                                <Route path="/logout" element={<Logout />} />
-                                <Route path="/courses/details/:detailsId" element={<CourseDetails/>}/>
-                                <Route path="/courses/create" element={<CreateCourse/>}/>
-                            </Routes>
-                        </main>
-                        <Footer></Footer>
-                    </div>
+                    
+                        <div className="App bg-background dark:bg-background_dark flex flex-col min-w-screen min-h-screen overflow-x-hidden items-center text-center justify-between">
+                            <Navigation />
+                            <main>
+                                <Routes>
+                                    <Route path="/" element={<Home />} />
+                                    <Route
+                                        path="/courses"
+                                        element={<Courses />}
+                                    />
+                                    <Route path="/login" element={<Login />} />
+                                    <Route
+                                        path="/register"
+                                        element={<Register />}
+                                    />
+                                    <Route
+                                        path="/logout"
+                                        element={<Logout />}
+                                    />
+                                    <Route
+                                        path="/courses/details/:detailsId"
+                                        element={<CourseDetails />}
+                                    />
+                                    <Route
+                                        path="/courses/create"
+                                        element={<CreateCourse />}
+                                    />
+                                </Routes>
+                            </main>
+                            <Footer></Footer>
+                        </div>
                 </Theme>
             </AuthProvider>
         </>
