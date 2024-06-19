@@ -15,6 +15,9 @@ const Navigation = () => {
             <Link to="/register" className="link register text-text dark:text-text_dark">
                 Sign up
             </Link>
+            <Link to="/courses/create" className="link create text-text dark:text-text_dark">
+                Create course
+            </Link>
         </>
     );
 
