@@ -8,6 +8,18 @@ export const getAll = async () => {
     return courses;
 }
 
+export const getById = async (id) => {
+    let res = await fetch(`${baseUrl}/courses/${id}`)
+
+    let result = await res.json();
+    
+    if (res.ok) {
+        return result;
+    } else {
+        throw result;
+    }
+}
+
 export const create = async (title, description, imageUrl) => {
     let res = await fetch(`${baseUrl}/courses/`, {
         method: 'POST',
