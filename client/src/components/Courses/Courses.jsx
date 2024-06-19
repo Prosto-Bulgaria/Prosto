@@ -16,7 +16,7 @@ const Courses = () => {
             setCourses(result);
             setTimeout(() => {
                 setIsLoading(false);
-            }, 1000)
+            }, 1800)
         });
     }, []);
 

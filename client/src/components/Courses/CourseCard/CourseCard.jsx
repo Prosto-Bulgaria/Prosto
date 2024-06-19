@@ -5,7 +5,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 const CourseCard = ({course}) => {
     return (
         <Link to={`details/${course._id}`}>
-            <div className="group hover:cursor-pointer rounded-xl h-72 w-96 min-w-sm w-md max-w-lg overflow-hidden text-xl bg-white dark:bg-primary_dark/5 shadow-md">
+            <div className="group hover:cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out rounded-xl h-72 w-96 min-w-sm w-md max-w-lg overflow-hidden text-xl bg-white dark:bg-primary_dark/5 shadow-md">
                 <div className="h-full flex flex-col">
                     <img
                         className="cardImage object-cover h-32 w-full"
@@ -32,7 +32,7 @@ const CourseCard = ({course}) => {
                                 </span>
                             </div>
                             <span
-                                className="text-transparent text-sm p-1 group-hover:text-accent dark:group-hover:text-accent_dark rounded-md transition duration-150 ease-in-out"
+                                className="text-transparent text-sm p-1 group-hover:text-accent dark:group-hover:text-accent_dark rounded-md transition duration-300 ease-in-out"
                             >
                                 Start now
                             </span>
