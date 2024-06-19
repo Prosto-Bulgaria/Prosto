@@ -1,10 +1,23 @@
+import * as coursesService from '../../../services/coursesService'
+import {useNavigate} from "react-router-dom"
+
 const CreateCourse = () => {
+    const navigate = useNavigate();
+
     const createHandler = (e) => {
         e.preventDefault();
 
-        let { title, description, image} = Object.fromEntries(
+        let { title, description, imageUrl} = Object.fromEntries(
             new FormData(e.currentTarget)
         );
+
+        coursesService.create(title,description,imageUrl)
+        .then(() => {
+            navigate("/")
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     };
 
     return (
@@ -66,19 +79,19 @@ const CreateCourse = () => {
                         </div>
                         <div>
                             <div className="flex items-center justify-between">
-                                <label htmlFor="image" className="form-label">
-                                    Image
+                                <label htmlFor="imageUrl" className="form-label">
+                                    Image Url
                                 </label>
                             </div>
                             <div className="mt-2">
                                 <input
-                                    id="image"
-                                    name="image"
-                                    type="file"
-                                    autoComplete="current-image"
+                                    id="imageUrl"
+                                    name="imageUrl"
+                                    type="url"
+                                    autoComplete="current-imageUrl"
                                     required
                                     rows={5}
-                                    placeholder="Your image here..."
+                                    placeholder="Your imageUrl url here..."
                                     className="form-input"
                                 />
                             </div>

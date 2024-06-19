@@ -1,5 +1,7 @@
 const {Schema, Types, model} = require('mongoose')
 
+const URL_PATTERN = /^https?:\/\/.+$/i
+
 const courseSchema = new Schema({
     title:{
         required: true,
@@ -11,10 +13,12 @@ const courseSchema = new Schema({
         type: String,
         minlength: [20, 'Description must be at least 20 characters long']
     },
-    image:{
-        required: true,
-        type: String
-    }
+    imageUrl: {
+        type: String, required: true, validate: {
+            validator: (value) => URL_PATTERN.test(value),
+            message: 'Image URL is not valid'
+        }
+    },
 })
 
 const Course = model('Course', courseSchema)

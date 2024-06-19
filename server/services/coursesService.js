@@ -11,3 +11,19 @@ async function getById(id) {
 async function deleteCourse(id){
     await Course.findByIdAndRemove(id);
 }
+
+async function createCourse(data){
+    try {
+        return await Course.create({...data})
+    } catch (error) {
+        console.log(error);
+        return error
+    }
+}
+
+module.exports = {
+    getAll,
+    getById,
+    deleteCourse,
+    createCourse,
+}

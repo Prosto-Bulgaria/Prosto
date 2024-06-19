@@ -1,29 +1,30 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-const CourseCard = () => {
+const CourseCard = ({course}) => {
     return (
-        <Link to={`details/${"asdlkfjhasd1"}`}>
-            <div className="group hover:cursor-pointer rounded-xl h-auto w-96 min-w-sm w-md max-w-lg overflow-hidden text-xl bg-white dark:bg-primary_dark/5 shadow-md">
-                <div className="content flex flex-col">
+        <Link to={`details/${course._id}`}>
+            <div className="group hover:cursor-pointer rounded-xl h-72 w-96 min-w-sm w-md max-w-lg overflow-hidden text-xl bg-white dark:bg-primary_dark/5 shadow-md">
+                <div className="h-full flex flex-col">
                     <img
-                        className="cardImage object-cover max-h-32"
-                        src="https://datapro.in/uploads/89eb94efd5a4418bcbd9db16f8e1977f.png"
+                        className="cardImage object-cover h-32 w-full"
+                        src={`${course.imageUrl}`}
                         alt=""
                     />
-                    <div className="wrap text-start p-4 flex flex-col gap-2">
+                    <div className="wrap text-start p-4 flex flex-col  gap-2 grow">
                         <div className="flex justify-between">
                             <header>
                                 <h2 className="text-xl text-text font-bold dark:text-text_dark">
-                                    Your title
+                                    {course.title}
                                 </h2>
                             </header>
                         </div>
-                        <div className="description">
+                        <div className="description grow">
                             <p className="text-sm flex text-text dark:text-text_dark">
-                                A course covering JS basics
+                                {course.description}
                             </p>
                         </div>
-                        <div className="wrap flex justify-between items-center">
+                        <div className="wrap flex justify-between items-center mt-auto">
                             <div className="notification">
                                 <span className="text-xs text-accent tracking-tighter p-1 bg-accent/20 dark:text-accent_dark dark:bg-accent_dark/20 rounded-md select-none">
                                     FREE THIS MONTH
