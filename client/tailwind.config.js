@@ -23,7 +23,7 @@ export default {
                 '-1': '-1',
             },
             backgroundImage:{
-                'gradient-radial-dots': 'radial-gradient(circle, rgba(0, 0, 0, 0.5) 1px, transparent 1px)',
+                'gradient-radial-dots': 'radial-gradient(circle, hsl(197, 47%, 3%, 0.5) 1px, transparent 1px)',
                 'gradient-radial-dots_dark': 'radial-gradient(circle, hsl(197, 47%, 97%, 0.5) 1px, transparent 1px)',
             },
             fontSize:{
@@ -31,7 +31,7 @@ export default {
             },
             boxShadow:{
                 'topBtn': '0px 4px 0px 0px rgba(255, 255, 255, 0.25) inset',
-                'inner-xl': 'inset 0 0 400px 100px hsl(197, 47%, 97%)',
+                'inner-xl': 'inset 0 0 600px 150px hsl(197, 47%, 97%)',
                 'inner-xl_dark': 'inset 0 0 600px 150px hsl(197, 47%, 3%)',
             },
             keyframes: {
