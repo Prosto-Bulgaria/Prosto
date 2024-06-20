@@ -1,0 +1,35 @@
+.dot-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: -123;
+    transition: background-image 3s;
+
+}
+
+.fading-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 50%, transparent 20%, hsl(197, 47%, 97%) 50%);
+    mask-image: radial-gradient(circle at 50%, transparent 20%, hsl(197, 47%, 97%) 80%);
+    mask-composite: subtract;
+    z-index: -123;
+    transition: background-image 3s, mask-image 3s;
+}
+
+.dark .dot-grid {
+    background-image: radial-gradient(circle, hsl(197, 47%, 97%, 0.2) 1px, transparent 1px);
+}
+
+.dark .fading-effect {
+    background-image: radial-gradient(circle at 50%, transparent 20%, hsl(197, 47%, 3%) 50%);
+    mask-image: radial-gradient(circle at 50%, transparent 20%, hsl(197, 47%, 3%) 80%);
+}

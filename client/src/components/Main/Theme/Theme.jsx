@@ -1,4 +1,3 @@
-import { useState } from "react";
 import moonLogo from "../../../assets/moon.png";
 import sunLogo from "../../../assets/sun.png";
 import useLocalStorageThemes from "../../../hooks/useLocalStorageThemes";
