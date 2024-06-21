@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Button from "../Main/Buttons/Button/Button";
-// import "./Home.css";
 
 const Home = () => {
     return (
