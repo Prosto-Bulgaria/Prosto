@@ -82,11 +82,11 @@ const Home = () => {
                 <div className="mb-[200px]">
                     <h2 className="text-3xl mb-8">
                         Every developer has to write{" "}
-                        <span className="bg-secondary_dark/50 rounded-md px-1 text-4xl font-bold text-secondary_dark">
+                        <span className="dark:bg-secondary_dark/50 bg-secondary/50 text-secondary rounded-md px-1 text-4xl font-bold dark:text-secondary_dark">
                             A LOT
                         </span>{" "}
                         of code before he becomes{" "}
-                        <b className="text-primary_dark text-4xl">GREAT</b>
+                        <b className="dark:text-primary_dark text-blue-400 text-4xl">GREAT</b>
                     </h2>
                     <button
                         onClick={() => {
@@ -105,14 +105,14 @@ const Home = () => {
                 ref={solutionRef}
             >
                 <div className="mb-[200px]">
-                    <h2 className="text-7xl mb-8 font-bold bg-blue-400/70 p-4 inline-block">
+                    <h2 className="text-7xl mb-8 font-bold bg-primary_dark/50 dark:bg-blue-400/70 p-4 inline-block">
                         OUR SOLUTION
                     </h2>
                     <h3 className="text-3xl mb-8">
                         We have turned learning into a game. Collect XP and
                         prizes for every little achievement
                     </h3>
-                    <button className="text-accent_dark animate-bounce text-lg">
+                    <button className="text-accent dark:text-accent_dark animate-bounce text-lg">
                         login now to begin your adventure 🧙‍♂️
                     </button>
                 </div>
@@ -124,7 +124,7 @@ const Home = () => {
                 <div className="mb-[200px]">
                     <h3 className="text-3xl mb-8">
                         Every course starts{" "}
-                        <b className="text-4xl text-lime-500 border-b-2 border-lime-500">
+                        <b className="text-4xl dark:text-lime-500 text-lime-600 border-b-2 border-lime-600 dark:border-lime-500">
                             FREE
                         </b>
                         , so don{"\u0027"}t hesitate to have a try
@@ -135,7 +135,7 @@ const Home = () => {
                             onClick={() => {
                                 window.scrollTo({ top: 0});
                             }}
-                            className="text-accent_dark text-lg"
+                            className="text-accent dark:text-accent_dark text-lg"
                         >
                             you can see here 🧠
                         </Link>
