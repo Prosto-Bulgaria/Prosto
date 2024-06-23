@@ -31,7 +31,7 @@ const Courses = () => {
 
                 <ul className="catalog grid grid-cols-2 gap-x-8 gap-y-6">
                     {isLoading ? (
-                        <CardSkeleton cards={6} />
+                        <CardSkeleton cards={8} />
                     ) : (
                         courses.map((x) => (
                             <CourseCard key={x._id} course={x} />
