@@ -82,7 +82,7 @@ const Home = () => {
                 <div className="mb-[200px]">
                     <h2 className="text-3xl mb-8">
                         Every developer has to write{" "}
-                        <span className="dark:bg-secondary_dark/50 bg-secondary/50 text-secondary rounded-md px-1 text-4xl font-bold dark:text-secondary_dark">
+                        <span className="dark:bg-secondary_dark/50 bg-secondary/50 contrast-200 text-secondary rounded-md px-1 text-4xl font-bold dark:text-secondary_dark">
                             A LOT
                         </span>{" "}
                         of code before he becomes{" "}
