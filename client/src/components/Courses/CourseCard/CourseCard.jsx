@@ -21,7 +21,7 @@ const CourseCard = ({course}) => {
                             </header>
                         </div>
                         <div className="description grow">
-                            <p className="text-sm flex">
+                            <p className="text-sm flex contrast-50">
                                 {course.description}
                             </p>
                         </div>
