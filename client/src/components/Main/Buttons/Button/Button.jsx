@@ -1,6 +1,6 @@
 const Button = ({ text, type }) => {
     let primaryButton = (
-        <button
+        <p
             className="
         bg-primary text-text_dark hover:text-primary_dark w-40
         dark:bg-primary select-none px-6 py-4 rounded-full text-base dark:text-primary_dark cursor-pointer border-none 
@@ -8,11 +8,11 @@ const Button = ({ text, type }) => {
         "
         >
             {text}
-        </button>
+        </p>
     );
 
     let secondaryButton = (
-        <button
+        <p
             className="
         bg-secondary text-text_dark hover:text-secondary_dark w-40
         dark:bg-secondary_dark select-none px-6 py-4 rounded-full text-base cursor-pointer border-none 
@@ -20,7 +20,7 @@ const Button = ({ text, type }) => {
         "
         >
             {text}
-        </button>
+        </p>
     );
 
     return <>{type == "primary" ? primaryButton : secondaryButton}</>;
