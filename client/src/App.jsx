@@ -4,7 +4,6 @@ import Home from "./components/Home/Home";
 import Courses from "./components/Courses/Courses";
 import Navigation from "./components/Main/Navigation/Navigation";
 import Footer from "./components/Main/Footer/Footer";
-import Login from "./components/Auth/Login/Login";
 import Register from "./components/Auth/Register/Register";
 import Theme from "./components/Main/Theme/Theme";
 import Logout from "./components/Auth/Logout/Logout";

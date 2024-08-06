@@ -3,7 +3,7 @@ import logoUrl from "../../../assets/ProstoNoBg.png";
 import "./Navigation.css";
 import { useAuthContext } from "../../../contexts/AuthContext";
 import { useRef } from "react";
-import Login from "../../Auth/Login/Login";
+import LoginModal from "../../Auth/Login/LoginModal";
 
 const Navigation = () => {
     const { isAuthenticated } = useAuthContext();
@@ -16,20 +16,7 @@ const Navigation = () => {
 
     let guestNav = (
         <>
-            <dialog
-                className="rounded-lg backdrop:bg-black/35 dark:backdrop:bg-black/85"
-                ref={dialogRef}
-            >
-                <Login onSuccess={closeDialog}></Login>
-            </dialog>
-            <button
-                onClick={() => {
-                    dialogRef.current?.showModal();
-                }}
-                className="link"
-            >
-                Sign in
-            </button>
+            <LoginModal clickElement={<a>Sign in</a>}></LoginModal>
             <Link to="/register" className="link register">
                 Sign up
             </Link>
