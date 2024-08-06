@@ -25,7 +25,6 @@ function App() {
                                         path="/courses"
                                         element={<Courses />}
                                     />
-                                    <Route path="/login" element={<Login />} />
                                     <Route
                                         path="/register"
                                         element={<Register />}

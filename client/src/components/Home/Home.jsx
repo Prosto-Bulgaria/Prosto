@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Button from "../Main/Buttons/Button/Button";
 import { useRef } from "react";
-import Login from "../Auth/Login/Login";
 import { useAuthContext } from "../../contexts/AuthContext";
+import LoginModal from "../Auth/Login/LoginModal";
 
 const Home = () => {
     const truthRef = useRef(null);
@@ -38,18 +38,8 @@ const Home = () => {
         </button>
     );
 
-    const closeDialog = () => {
-        dialogRef.current?.close();
-    };
-
     return (
         <div className="mt-16" ref={topRef}>
-            <dialog
-                className="rounded-lg backdrop:bg-black/35 dark:backdrop:bg-black/85"
-                ref={dialogRef}
-            >
-                <Login onSuccess={closeDialog}></Login>
-            </dialog>
             <section className="welcome relative z-10 px-36 py-44 font-bold">
                 <div className="absolute inset-0 top-0 left-0 mx-auto w-1/2 transition-all ease-linear duration-200 h-full bg-gradient-radial-dots dark:bg-gradient-radial-dots_dark bg-20 z-[-123] rounded-full shadow-inner-xl dark:shadow-inner-xl_dark"></div>
 
@@ -153,7 +143,15 @@ const Home = () => {
                         We have turned learning into a game. Collect XP and
                         prizes for every little achievement
                     </h3>
-                    {isAuthenticated? userButton: guestButton}
+                    <div onClick={() => {
+                            if(isAuthenticated){
+                                coursesRef.current?.scrollIntoView({
+                                    behavior: "smooth",
+                                });
+                            }
+                        }}  className="animate-bounce cursor-pointer inline-block">
+                        <LoginModal clickElement={isAuthenticated? userButton: guestButton} isAuth={isAuthenticated}/>
+                    </div>
                 </div>
             </section>
             <section
