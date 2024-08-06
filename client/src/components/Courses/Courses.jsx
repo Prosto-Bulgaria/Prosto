@@ -11,6 +11,10 @@ const Courses = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        window.scrollTo(0,0);
+    },[]);
+
+    useEffect(() => {
         coursesService.getAll().then((result) => {
             result;
             setCourses(result);

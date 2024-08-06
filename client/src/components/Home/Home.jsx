@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Button from "../Main/Buttons/Button/Button";
 import { useRef } from "react";
+import Login from "../Auth/Login/Login";
+import { useAuthContext } from "../../contexts/AuthContext";
 
 const Home = () => {
     const truthRef = useRef(null);
@@ -8,9 +10,46 @@ const Home = () => {
     const questionRef = useRef(null);
     const coursesRef = useRef(null);
     const topRef = useRef(null);
+    const dialogRef = useRef();
+
+    const { isAuthenticated } = useAuthContext();
+
+    let guestButton = (
+        <button
+            onClick={() => {
+                dialogRef.current?.showModal();
+            }}
+            className="text-accent dark:text-accent_dark animate-bounce text-lg"
+        >
+            login now to begin your adventure 🧙‍♂️
+        </button>
+    );
+
+    let userButton = (
+        <button
+            onClick={() => {
+                coursesRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                });
+            }}
+            className="text-accent dark:text-accent_dark animate-bounce text-lg"
+        >
+            you are signed in 😄!
+        </button>
+    );
+
+    const closeDialog = () => {
+        dialogRef.current?.close();
+    };
 
     return (
         <div className="mt-16" ref={topRef}>
+            <dialog
+                className="rounded-lg backdrop:bg-black/35 dark:backdrop:bg-black/85"
+                ref={dialogRef}
+            >
+                <Login onSuccess={closeDialog}></Login>
+            </dialog>
             <section className="welcome relative z-10 px-36 py-44 font-bold">
                 <div className="absolute inset-0 top-0 left-0 mx-auto w-1/2 transition-all ease-linear duration-200 h-full bg-gradient-radial-dots dark:bg-gradient-radial-dots_dark bg-20 z-[-123] rounded-full shadow-inner-xl dark:shadow-inner-xl_dark"></div>
 
@@ -86,7 +125,9 @@ const Home = () => {
                             A LOT
                         </span>{" "}
                         of code before he becomes{" "}
-                        <b className="dark:text-primary_dark text-blue-400 text-4xl">GREAT</b>
+                        <b className="dark:text-primary_dark text-blue-400 text-4xl">
+                            GREAT
+                        </b>
                     </h2>
                     <button
                         onClick={() => {
@@ -112,9 +153,7 @@ const Home = () => {
                         We have turned learning into a game. Collect XP and
                         prizes for every little achievement
                     </h3>
-                    <button className="text-accent dark:text-accent_dark animate-bounce text-lg">
-                        login now to begin your adventure 🧙‍♂️
-                    </button>
+                    {isAuthenticated? userButton: guestButton}
                 </div>
             </section>
             <section
@@ -132,9 +171,6 @@ const Home = () => {
                     <button className="animate-bounce">
                         <Link
                             to="/courses"
-                            onClick={() => {
-                                window.scrollTo({ top: 0});
-                            }}
                             className="text-accent dark:text-accent_dark text-lg"
                         >
                             you can see here 🧠

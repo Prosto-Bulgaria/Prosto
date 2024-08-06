@@ -1,10 +1,9 @@
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import * as authService from "../../../services/authService";
 import { useAuthContext } from "../../../contexts/AuthContext";
 import { isAuth } from "../../../hoc/isAuth";
-const Login = () => {
-    const navigate = useNavigate();
+const Login = ({onSuccess}) => {
 
     const authContext = useAuthContext();
 
@@ -19,7 +18,7 @@ const Login = () => {
             .then((authData) => {
                 authData.remember_me = remember_me
                 authContext.login(authData)
-                navigate("/");
+                onSuccess? onSuccess() : null;
             })
             .catch((err) => {
                 // TODO : Show feedback/notification
