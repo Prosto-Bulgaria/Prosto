@@ -16,7 +16,7 @@ const Navigation = () => {
 
     let guestNav = (
         <>
-            <LoginModal clickElement={<a>Sign in</a>}></LoginModal>
+            <LoginModal clickElement={<a className="link">Sign in</a>}></LoginModal>
             <Link to="/register" className="link register">
                 Sign up
             </Link>
