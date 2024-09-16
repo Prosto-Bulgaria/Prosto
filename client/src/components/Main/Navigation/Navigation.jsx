@@ -4,6 +4,7 @@ import "./Navigation.css";
 import { useAuthContext } from "../../../contexts/AuthContext";
 import { useRef } from "react";
 import LoginModal from "../../Auth/Login/LoginModal";
+import RegisterModal from "../../Auth/Register/RegisterModal";
 
 const Navigation = () => {
     const { isAuthenticated } = useAuthContext();
@@ -17,9 +18,7 @@ const Navigation = () => {
     let guestNav = (
         <>
             <LoginModal clickElement={<a className="link">Sign in</a>}></LoginModal>
-            <Link to="/register" className="link register">
-                Sign up
-            </Link>
+            <RegisterModal clickElement={<a className="link">Sign up</a>}></RegisterModal>
             <Link to="/courses/create" className="link create">
                 Create course
             </Link>
